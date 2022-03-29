@@ -2,12 +2,9 @@
 # EMAIL -- SHANTAN.POLEPALLY@ALASKAAIR.COM
 # THIS SCRIPT IS USED TO PERFORM THE FOLLOWING OPERATIONS
 #1. Bounce EAI Component
-
 try
 	{
-	
 		$myDir = Split-Path -Parent $MyInvocation.MyCommand.Path
-		# Load config file
 		[xml]$ConfigFile = Get-Content "$MyDir\SiebelDevTasks.config"
         $FldrNameTime = (Get-Date -format MMddyyyy) + "_" + (Get-Date -format mmss)
 		$ScriptName = "EAIBounce_"
@@ -23,17 +20,12 @@ try
 		Write-Output "COMPLETED EXECUTING EAIBounce.PS1"
 			
 	}
-
-
-# used to catch any exception and occured in try block and send an email to the admin
 Catch
 	{
 		$ErrorMessage = $_.Exception.Message
 		$FailedItem = $_.Exception.ItemName
 		Write-Output "EXCEPTION RUNNING EAIBounce.ps1" "ERROR MESSAGE: $ErrorMessage ` FAILEDITEM: $FailedItem `n"
-	
-	}
-
+		}
 finally
 	{
 	Clear-Variable FldrNameTime
@@ -45,4 +37,3 @@ finally
 	Clear-Variable AdminPassword
 	Stop-Transcript
 	}
-
