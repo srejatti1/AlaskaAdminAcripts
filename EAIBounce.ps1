@@ -23,6 +23,7 @@ Catch
 	{
 		$ErrorMessage = $_.Exception.Message
 		$FailedItem = $_.Exception.ItemName
+		Write-Output "EXCEPTION RUNNING EAIBounce.ps1" "ERROR MESSAGE: $ErrorMessage ` FAILEDITEM: $FailedItem `n"
 	}
 finally
 	{
