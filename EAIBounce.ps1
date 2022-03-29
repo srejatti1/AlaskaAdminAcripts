@@ -17,15 +17,13 @@ try
 		Set-Location -Path "D:\sea\ses\siebsrvr\BIN"
 		.\srvrmgr.exe /g $Gateway /e $Enterprise /u $AdminUser /p $AdminPassword /i "D:\FTPRoot\Rollouts\BatchScripts\PowerShell_Files\restart_eai.txt" 
     	Set-Location -Path "D:\FTPRoot\Rollouts\BatchScripts\PowerShell_Files"
-		Write-Output "COMPLETED EXECUTING EAIBounce.PS1"
-			
+		Write-Output "COMPLETED EXECUTING EAIBounce.PS1"			
 	}
 Catch
 	{
 		$ErrorMessage = $_.Exception.Message
 		$FailedItem = $_.Exception.ItemName
-		Write-Output "EXCEPTION RUNNING EAIBounce.ps1" "ERROR MESSAGE: $ErrorMessage ` FAILEDITEM: $FailedItem `n"
-		}
+	}
 finally
 	{
 	Clear-Variable FldrNameTime
