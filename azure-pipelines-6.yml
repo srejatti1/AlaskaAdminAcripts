@@ -1,5 +1,5 @@
 # Starter pipeline
-- task: BatchScript@1
+- task: BatchScript
   inputs:
     filename: 'D:\FTPRoot\Rollouts\BatchScripts\Executable_Batch_Scripts\EAIBounce.bat'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
