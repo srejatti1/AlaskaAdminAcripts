@@ -1,0 +1,3 @@
+Get-WmiObject -ComputerName seaqasbl19apl01,seaqasbl19apl02,seaqasbl19apl03,seaqasbl19apl04,seaqasbl19apl05,seaqasbl19apl06,seaqasbl19apl07,seaqasbl19apl08,seaqasbl19apl09,seaqasbl19apl10,seaqasbl19apl11,seaqasbl19apl12,seaqasbl19wb01,seaqasbl19wb02,seaqasbl19wb03,seaqasbl19aplgw win32_operatingsystem | select csname, @{LABEL=’LastBootUpTime’;EXPRESSION={$_.ConverttoDateTime($_.lastbootuptime)}} | Out-GridView
+sleep 20
+exit

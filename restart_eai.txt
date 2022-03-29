@@ -1,0 +1,7 @@
+pause comp EAIObjMgr_enu for server sbl19dvsrvr2
+sleep 15
+kill comp EAIObjMgr_enu for server sbl19dvsrvr2
+sleep 30
+start comp EAIObjMgr_enu for server sbl19dvsrvr2
+sleep 45
+list comp EAIObjMgr_enu show  SV_NAME, CC_ALIAS, CP_START_TIME,  CP_DISP_RUN_STATE, CP_STARTMODE
