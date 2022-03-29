@@ -1,12 +1,6 @@
 # Starter pipeline
 - task: BatchScript@1
   inputs:
-    filename: 'D:\FTPRoot\Rollouts\BatchScripts\Executable_Batch_Scripts'
-    filename: 'D:\FTPRoot\Rollouts\BatchScripts\Executable_Batch_Scripts\ComponentStatus.bat'
-    filename: 'D:\FTPRoot\Rollouts\BatchScripts\Executable_Batch_Scripts\EAIBounce.bat'
-    workingFolder: 'D:\FTPRoot\Rollouts\BatchScripts\'
-- task: BatchScript@1
-  inputs:
     filename: 'D:\FTPRoot\Rollouts\BatchScripts\Executable_Batch_Scripts\EAIBounce.bat'
     workingFolder: 'D:\FTPRoot\Rollouts\BatchScripts\'
 
