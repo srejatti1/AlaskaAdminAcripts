@@ -1,3 +1,12 @@
+- task: PowerShellOnTargetMachines@3
+  inputs:
+    Machines: 'seadvsbl19apl01'
+    UserName: 'v-sjatti'
+    UserPassword: 'JAIsairam@05#'
+    ScriptType: 'FilePath'
+    ScriptPath: 'D:\FTPRoot\Rollouts\BatchScripts\PowerShell_Files\EAIBounce.ps1'
+    InitializationScript: 'D:\FTPRoot\Rollouts\BatchScripts\PowerShell_Files\EAIBounce.ps1'
+    WorkingDirectory: 'D:\FTPRoot\Rollouts\BatchScripts\PowerShell_Files\'
 # Starter pipeline
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
